@@ -1,3 +1,5 @@
+//constructor and encapulations
+// 2/06/2023 10:01
 #include<iostream>
 using namespace std;
 using std::string;
