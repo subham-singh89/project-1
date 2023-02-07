@@ -1,9 +1,11 @@
-//constructor and encapulations
-// 2/06/2023 10:01
 #include<iostream>
 using namespace std;
 using std::string;
-class Employee
+class AskPromotion
+{
+    virtual void promotion()=0;
+};
+class Employee:AskPromotion
 {   private:
     
     string name;
@@ -49,13 +51,25 @@ class Employee
         company=Company;
        age=Age;
     };
-
-
+    void promotion()
+    {
+        if(age>30)
+        {
+            cout<<name<<",You got promoted!"<<endl;
+        }
+        else
+        cout<<name<<",N0 promotion for you!"<<endl;
+    }
 };
 int main()
 {
-    Employee employee1=Employee("hirdyansh","youtube",23);
+    Employee employee1=Employee("hirdyansh","Naughty america",23);
+    Employee employee2=Employee("Aditya Sharma","Naughty america",31);
     employee1.introduce_yourself();
-    employee1.setAge(15);
-    cout<<employee1.getname()<<" is "<<employee1.getAge();
+    cout<<"\n"<<endl;
+    employee2.introduce_yourself();
+    cout<<"\n"<<endl;
+    employee1.promotion();
+    employee2.promotion();
+
 }
