@@ -21,6 +21,9 @@ int main()
 		vac1.push_back(element);
 	}
 	display(vac1);
+	vector<int>::iterator iter=vac1.begin();
+	vac1.insert(iter+1,5,599);
+	display(vac1);
 	return 0;
 	
 }
